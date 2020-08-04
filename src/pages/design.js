@@ -8,7 +8,9 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
-import MovinImg from "../images/movin.png"
+import MovinLogo from "../images/movinlogo.png"
+import MovinLanding from "../images/movinlanding.png"
+import MovinDeck from "../images/movindeck.png"
 
 const DesignPageStyle = css`
   .text {
@@ -32,15 +34,18 @@ const DesignPageStyle = css`
     grid-gap: 96px;
 
     .link-card {
+      width: 100%;
+      float: left;
+      margin: 0;
+      padding: 0;
       position: relative;
-      border-radius: 24px;
-      overflow: hidden;
+      background-color: rgba(0,0,0,0.7);
 
       .image {
-        max-width: 100%;
-        max-height: 100%;
-        
-      
+        display: block;
+       
+       
+        padding-top: 40%;
         background-size: cover;
         background-position: center;
         background-color: rgba(0,0,0,0.7);
@@ -51,8 +56,27 @@ const DesignPageStyle = css`
           background-color: transparent;
         }
 
-        &#movin {
-          background-image: url(${MovinImg});
+        &#logo {
+          background-image: url(${MovinLogo});
+          height: 3%;
+          width: 3%;
+          padding-left: 33%;
+          float: left;
+        }
+        
+        &#landingpage {
+          background-image: url(${MovinLanding});
+          height: 80%;
+          width: auto;
+          float: right;
+        }
+
+        &#deckpage {
+          background-image: url(${MovinDeck});
+          height: 80%;
+          width: auto;
+          
+          float: right;
         }
 
       }
@@ -76,7 +100,10 @@ const DesignPage = () => (
       </div>
       <div className="links">
         <div className="link-card">
-          <div className="image" id="movin"></div>
+          <div className="image" id="logo"></div>
+          <div className="image" id="deckpage"></div>
+          <div className="image" id="landingpage"></div>
+          <h1>Movin'</h1>
         </div>
         <div className="link-card">
           <h1>Daily UI Challenges</h1>
