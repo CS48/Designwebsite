@@ -11,6 +11,9 @@ import SEO from "../components/seo"
 import MovinLogo from "../images/movinlogo.png"
 import MovinLanding from "../images/movinlanding.png"
 import MovinDeck from "../images/movindeck.png"
+import Cntdwn from "../images/screen1.png"
+import UserProfile from "../images/User Profile.png"
+
 
 const DesignPageStyle = css`
   .text {
@@ -24,18 +27,34 @@ const DesignPageStyle = css`
       margin-bottom: 36px;
       border-bottom: solid 3px white;
     }
+
+    .Nunito {
+      margin-top: 10%;
+      margin-right: 14%;
+    }
+
+    .dpagetext {
+      margin-top: -63px;
+      align-items: left;
+    }
   }
+
 
   .links {
     margin-top: 48px;
 
-    display: grid;
-    grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 96px;
+    display: flex;
+    gap: 96px;
+    flex-direction: column;
+    align-items: center;
+    
 
     .link-card {
       width: 100%;
-      float: left;
+      height: auto;
+      
+      border-radius: 24px;
+     
       margin: 0;
       padding: 0;
       position: relative;
@@ -45,47 +64,60 @@ const DesignPageStyle = css`
         display: block;
        
        
-        padding-top: 40%;
+
         background-size: cover;
         background-position: center;
-        background-color: rgba(0,0,0,0.7);
-
-        transition: all 0.3s ease-out;
-
-        &:hover {
-          background-color: transparent;
-        }
+        background-color: transparent;
+        
 
         &#logo {
+          
           background-image: url(${MovinLogo});
-          height: 3%;
-          width: 3%;
-          padding-left: 33%;
+          height: auto;
+          width: auto;
+          padding-left: 24%;
+          padding-top: 33%;
           float: left;
         }
         
         &#landingpage {
           background-image: url(${MovinLanding});
-          height: 80%;
-          width: auto;
+          height: 300px;
+          width: 13%;
+          margin-top: 4%;
+          margin-right 3%;
           float: right;
+          
         }
 
         &#deckpage {
           background-image: url(${MovinDeck});
-          height: 80%;
-          width: auto;
+          height: 300px;
+          width: 13%;
+          margin-top: 4%;
+          margin-right 3%;
+          float: right;
           
+        }
+
+        &#cntdwn {
+          background-image: url(${Cntdwn});
+          height: 300px;
+          width: 13%;
+          margin-top: 1%;
+          margin-right 3%;
           float: right;
         }
 
+      
       }
 
-      h1 {
+      .h1 {
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        text-align: left;
+        margin-top: 13%;
+
+       
       }
     }
   }
@@ -103,10 +135,16 @@ const DesignPage = () => (
           <div className="image" id="logo"></div>
           <div className="image" id="deckpage"></div>
           <div className="image" id="landingpage"></div>
-          <h1>Movin'</h1>
+          <div className="text">
+            <span className="Nunito">Movin'</span>
+          </div>
         </div>
         <div className="link-card">
-          <h1>Daily UI Challenges</h1>
+          <div className="image" id="cntdwn"></div>
+          <div className="image" id="userprofile"></div>
+          <div className="text">
+            <span className="dpagetext">Daily UI Challenges</span>
+          </div>
         </div>
       </div>
       

@@ -11,6 +11,7 @@ import SEO from "../components/seo"
 import DesignImg from "../images/design-img.png"
 import ArtImg from "../images/art-img.png"
 
+
 const indexPageStyle = css`
   .text {
     margin-top: 64px;
@@ -43,8 +44,8 @@ const indexPageStyle = css`
         background-position: center;
         background-color: rgba(0,0,0,0.7);
 
-        filter: blur(4px);
-        -webkit-filter: blur(4px);
+        filter: blur(3px);
+        -webkit-filter: blur(3px);
 
         transition: all 0.3s ease-out;
 
@@ -61,6 +62,8 @@ const indexPageStyle = css`
         &#art {
           background-image: url(${ArtImg});
         }
+
+   
       }
 
       h1 {
